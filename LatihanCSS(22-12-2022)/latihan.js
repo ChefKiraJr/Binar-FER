@@ -8,7 +8,7 @@ const oddDisplay = (n) => {
   return result;
 };
 
-console.log(oddDisplay(200));
+// console.log(oddDisplay(200));
 
 const rankProgrammer = (salary) => {
   let rank = '';
@@ -26,4 +26,17 @@ const rankProgrammer = (salary) => {
   return rank;
 };
 
-console.log(rankProgrammer(19000000));
+// console.log(rankProgrammer(19000000));
+
+const arithmeticProgression = (a, b) => {
+  let result = [];
+  for (let i = a; i <= b; i++) {
+    let pushNum = 1 + (i * (i - 1)) / 2;
+    result.push(pushNum);
+  }
+  return result;
+};
+
+console.log(arithmeticProgression(1, 3), 'Contoh 1');
+console.log(arithmeticProgression(1, 5), 'Contoh 2');
+console.log(arithmeticProgression(222, 232), 'Contoh 3');

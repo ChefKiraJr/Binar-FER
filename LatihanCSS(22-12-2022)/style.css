@@ -3,10 +3,8 @@ html {
 }
 
 .container {
-  width: 50%;
+  width: 70%;
   margin: auto;
-  padding-left: 25%;
-  padding-right: 25%;
 }
 
 header {
@@ -42,8 +40,6 @@ header {
 
 .article > p:nth-child(1) {
   text-align: end;
-  display: flex;
-  justify-content: end;
 }
 
 .article > p:nth-child(2) {
@@ -52,8 +48,6 @@ header {
 
 .article > p:nth-child(3) {
   text-align: end;
-  display: flex;
-  justify-content: end;
 }
 
 .footer {
