@@ -243,7 +243,7 @@ const emailSortDesc = users.sort((a, b) => {
   return 0;
 });
 
-// console.log(emailSortDesc);
+console.log(emailSortDesc);
 
 const companySortAsc = users.sort((a, b) => {
   const companyA = a.company.name.toLowerCase();
@@ -257,4 +257,10 @@ const companySortAsc = users.sort((a, b) => {
   return 0;
 });
 
-console.log(companySortAsc);
+// console.log(companySortAsc);
+
+// const evenFilterMap =
+
+console.log(users.filter((user) => user.id > 5));
+
+// console.log(evenFilterMap);

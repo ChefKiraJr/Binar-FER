@@ -24,5 +24,5 @@ const makeRow = () => {
 const numArray = new Row(makeRow());
 
 console.log(numArray.getIndexOf([52, 55, 57, 68, 77]));
-console.log(numArray.getValue(2));
+console.log(numArray.getValue(250));
 console.log(numArray.sortDescending());
