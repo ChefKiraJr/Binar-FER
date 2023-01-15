@@ -257,10 +257,10 @@ const companySortAsc = users.sort((a, b) => {
   return 0;
 });
 
-// console.log(companySortAsc);
+console.log(companySortAsc);
 
-// const evenFilterMap =
+const evenFilterMap = users
+  .filter((user) => user.id % 2 === 0)
+  .map((user) => user.company.name);
 
-console.log(users.filter((user) => user.id > 5));
-
-// console.log(evenFilterMap);
+console.log(evenFilterMap);
