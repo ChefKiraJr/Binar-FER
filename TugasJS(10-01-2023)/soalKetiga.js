@@ -243,7 +243,7 @@ const emailSortDesc = users.sort((a, b) => {
   return 0;
 });
 
-console.log(emailSortDesc);
+// console.log(emailSortDesc);
 
 const companySortAsc = users.sort((a, b) => {
   const companyA = a.company.name.toLowerCase();
@@ -257,10 +257,12 @@ const companySortAsc = users.sort((a, b) => {
   return 0;
 });
 
-console.log(companySortAsc);
+// console.log(companySortAsc);
 
 const evenFilterMap = users
   .filter((user) => user.id % 2 === 0)
-  .map((user) => user.company.name);
+  .map((user) => {
+    return { companyName: user.company.name, ...user.address };
+  });
 
 console.log(evenFilterMap);
