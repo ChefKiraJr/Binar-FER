@@ -1,12 +1,12 @@
-import "./App.css";
-import EmployeePage from "./pages/EmployeePage";
-import Main from "./pages/Main";
+import './App.css';
+import CompleteTable from './pages/CompleteTable';
+import EmployeePage from './pages/EmployeePage';
+import Main from './pages/Main';
 
 function App() {
   return (
-    <div className="App">
-      {/* <Main /> */}
-      <EmployeePage />
+    <div className="app">
+      <CompleteTable />
     </div>
   );
 }

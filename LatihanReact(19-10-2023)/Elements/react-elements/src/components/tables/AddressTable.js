@@ -7,33 +7,26 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-const EmployeeTable = ({
-  listPegawai = [],
-  headerPertama,
-  headerKedua,
-  headerKetiga,
-}) => {
+const AddressTable = ({ address = [] }) => {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>{headerPertama}</TableCell>
-            <TableCell>{headerKedua}</TableCell>
-            <TableCell>{headerKetiga}</TableCell>
+            <TableCell>Id</TableCell>
+            <TableCell>Company Name</TableCell>
+            <TableCell>Address</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {listPegawai.map((pegawai) => (
+          {address.map((user) => (
             <TableRow
-              key={pegawai.id}
+              key={user.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
-                {pegawai.name}
-              </TableCell>
-              <TableCell>{pegawai.email}</TableCell>
-              <TableCell>{pegawai.phone}</TableCell>
+              <TableCell>{user.id}</TableCell>
+              <TableCell>{user.companyName}</TableCell>
+              <TableCell>{`${user.suite}, ${user.street}, ${user.city} (${user.zipcode})`}</TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -42,4 +35,4 @@ const EmployeeTable = ({
   );
 };
 
-export default EmployeeTable;
+export default AddressTable;
