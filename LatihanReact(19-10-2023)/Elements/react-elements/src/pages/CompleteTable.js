@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import AddressTable from '../components/tables/AddressTable';
-import CompanyTable from '../components/tables/CompanyTable';
-import EmailTable from '../components/tables/EmailTable';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import AddressTable from "../components/tables/AddressTable";
+import CompanyTable from "../components/tables/CompanyTable";
+import EmailTable from "../components/tables/EmailTable";
+import "./completeTable.css";
 
 const CompleteTable = () => {
   const [email, setEmail] = useState();
@@ -11,7 +12,7 @@ const CompleteTable = () => {
   const getEmailData = async () => {
     try {
       const { data } = await axios.get(
-        'https://jsonplaceholder.typicode.com/users'
+        "https://jsonplaceholder.typicode.com/users"
       );
       const emailSort = emailSortDesc([...data]);
       setEmail(emailSort);
@@ -26,9 +27,9 @@ const CompleteTable = () => {
   useEffect(() => {
     getEmailData();
   }, []);
-  console.log(email, 'EMAIL');
-  console.log(companyName, 'NAME');
-  console.log(address, 'ADDRESS');
+  console.log(email, "EMAIL");
+  console.log(companyName, "NAME");
+  console.log(address, "ADDRESS");
   return (
     <div className="complete-table__container">
       <EmailTable email={email} />
